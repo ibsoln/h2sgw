@@ -11,7 +11,7 @@
 
 .Advance
 * Some topics go here
-
+* xref:adv-working-with-tombstones.adoc[Working with tombstones]
 * Manage
 ** xref:logging.adoc[Logging]
 ** xref:stats-monitoring.adoc[Stats Monitoring]
@@ -30,7 +30,7 @@
 .Learn
 * xref:concept-fundamentals.adoc[Fundamental SGW concepts]
 ** xref:shared-bucket-access.adoc[Mobile-Server Data Sync]
-** xref:managing-tombstones.adoc[Tombstones]
+** xref:concept-tombstones.adoc[Tombstones]
 ** xref:indexing.adoc[Indexing]
 ** xref:resolving-conflicts.adoc[Resolving Conflicts]
 
