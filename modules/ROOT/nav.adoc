@@ -28,7 +28,13 @@
 ** xref:os-level-tuning.adoc[OS Level Tuning]
 
 .Learn
-* xref:access-control-overview.adoc[Access Control Overview]
+* xref:concept-fundamentals.adoc[Fundamental SGW concepts]
+** xref:shared-bucket-access.adoc[Mobile-Server Data Sync]
+** xref:managing-tombstones.adoc[Tombstones]
+** xref:indexing.adoc[Indexing]
+** xref:resolving-conflicts.adoc[Resolving Conflicts]
+
+* xref:concept-access-control-ovw.adoc[Access Control Overview]
 ** xref:users-and-roles.adoc[Users and Roles]
 ** xref:authentication.adoc[Authentication]
 ** xref:sync-gateway-channels.adoc[Sync Gateway Channels]
@@ -37,11 +43,7 @@
 ** xref:sync-function.adoc[Sync Function]
 // * xref:config-properties.adoc[Configuration File]
 * xref:command-line-options.adoc[CLI]
-* xref:shared-bucket-access.adoc[Mobile-Server Data Sync]
-* xref:managing-tombstones.adoc[Tombstones]
-* xref:indexing.adoc[Indexing]
 * xref:server-integration.adoc[Webhooks and Changes Feed]
-* xref:resolving-conflicts.adoc[Resolving Conflicts]
 * xref:integrating-external-stores.adoc[Integrating External Stores]
 * xref:running-replications.adoc[Inter-cluster Replication]
 * xref:rest-api-client.adoc[REST API Client]
@@ -52,6 +54,7 @@
 * API References
 ** xref:rest-api.adoc[Public REST API]
 ** xref:admin-rest-api.adoc[Admin REST API]
+* xref:refer-glossary.adoc[Glossary -- sync gateway terms]
 
 .Product Information
 * xref:release-notes.adoc[Release Notes]
