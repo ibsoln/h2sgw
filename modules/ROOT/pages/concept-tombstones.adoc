@@ -6,15 +6,17 @@ xref:glossary.adoc[Mobile tombstones] enable mobile clients to be notified when 
 
 == What tombstones are
 
-A _tombstone_ is a document revision that contains only:
-* the document ID
+A _tombstone_ is a persistent record that an item has been deleted.
+
+Sync Gateway creates tombstones to ensure all synchronizing devices can identify that a previously existing document has now been deleted, this is particularly necessary in the case of devices that may not be online continuously and therefore not syncing regularly.
+
+The actual tombstone artefact is a document revision comprising only:
+
+* the (deleted) document ID
 * a revision ID
 * a key value pair `deleted:true`.
 
-The tombstone acts as the record of a deleted item.
-It is created to allow all devices to see that a document has been deleted - particularly in the case of devices that may not be online continuously and therefore not syncing regularly.
-
-+
+.Example tombstone artefact
 [source,json]
 ----
 {
