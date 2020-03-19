@@ -1,4 +1,6 @@
 = Managing Tombstones
+include::partial$_attributesLocal.adoc[]
+:page-aliases: managing-tombstones
 
 xref:glossary.adoc[Mobile tombstones] enable mobile clients to be notified when a document has been deleted.
 
