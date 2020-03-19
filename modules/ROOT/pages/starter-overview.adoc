@@ -1,0 +1,10 @@
+= Getting Started Overview
+include::partial$_attributesLocal.adoc[]
+:idprefix:
+:idseparator: -
+
+:sg_download_link: {url-package-downloads}/{version-full}/
+:sg_package_name: couchbase-sync-gateway-community_{version-full}_x86_64
+:sg_package_name_ee: couchbase-sync-gateway-enterprise_{version-full}_x86_64
+:sg_accel_package_name: couchbase-sync-gateway-enterprise_{version-full}_x86_64
+

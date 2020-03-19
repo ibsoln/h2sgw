@@ -1,4 +1,5 @@
-= Data Modeling
+= User Properties
+:page-aliases: data-modelling
 
 == Property prefix
 

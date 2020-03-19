@@ -1,0 +1,65 @@
+= Getting Started
+:page-type: procedural
+:page-layout: article
+:page-role: -toc
+:page-status: beta
+include::partial$_attributesLocal.adoc[]
+
+:idprefix:
+:idseparator: -
+
+== Install Couchbase Server
+
+Before installing Sync Gateway, you must install and configure Couchbase Server.
+
+{url-downloads}[Download] and install Couchbase Server.
+
+=== Creating a bucket
+
+. Open the Couchbase Server Admin Console on `+http://localhost:8091+` and log on using your administrator credentials.
+. In the toolbar, select the *Buckets* tab and click the *Add Bucket* button.
++
+image::cb-create-bucket.png[]
+. In the pop-up window, enter *getting-started-bucket* for the *name* and click *Add Bucket*.
+You can leave the other options to their defaults.
++
+image::cb-create-bucket-popup.png[]
+
+=== Creating an RBAC user
+
+In order for Sync Gateway to connect to Couchbase Server, you must create an RBAC user.
+The RBAC user credentials will be used in a later section to start Sync Gateway.
+
+. Open the *Security* tab and click the *Add User* button.
++
+image::create-user.png[]
+
+. The steps to create the RBAC user differ slightly depending on the version of Couchbase Server that you have installed. We explain the differences below.
++
+[{tabs}]
+====
+Couchbase Server 5.5 or above::
++
+In the pop-up window, provide a *Username* (`sync_gateway`) and *Password* (`password`).
+Those credentials will be used by Sync Gateway to connect to Couchbase Server (in the <<configure-sync-gateway>> section).
+You must grant RBAC roles to that user.
+If you are using Couchbase Server 5.5 or above, you must enable the *Application Access* and *Read Only Admin* roles as shown on the image below.
++
+image::user-settings-5-5.png[]
+
+Couchbase Server 5.1::
++
+In the pop-up window, provide a *Username* and *Password*, those credentials will be used by Sync Gateway to connect later on.
+Next, you must grant RBAC roles to that user.
+If you are using Couchbase Server 5.1, you must enable the *Bucket Full Access* and *Read Only Admin* roles.
++
+image::user-settings.png[]
+====
+
+=== Network access
+
+If you're installing Couchbase Server on the cloud, make sure that network permissions (or firewall settings) allow incoming connections to Couchbase Server ports.
+In a typical mobile deployment on premise or in the cloud (AWS, Red Hat, etc.), the following ports must be opened on the host for Couchbase Server to operate correctly: 8091, 8092, 8093, 8094, 11207, 11210, 11211, 18091, 18092, 18093.
+You must verify that any firewall configuration allows communication on the specified ports.
+If this is not done, the Couchbase Server node can experience difficulty joining a cluster.
+You can refer to the xref:server:install:install-ports.adoc[Couchbase Server Network Configuration] guide to see the full list of available ports and their associated services.

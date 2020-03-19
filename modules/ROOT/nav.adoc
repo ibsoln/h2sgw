@@ -1,19 +1,41 @@
 .Introduction
 * xref:introduction.adoc[Introduction]
 * xref:index.adoc[What's New]
-* xref:getting-started.adoc[Getting Started]
-* xref:data-modeling.adoc[Data Modeling]
 
-.Access Control
-* xref:users-and-roles.adoc[Users and Roles]
-* xref:authentication.adoc[Authentication]
-* xref:sync-gateway-channels.adoc[Sync Gateway Channels]
-* xref:read-access.adoc[Read Access]
-* xref:write-access.adoc[Write Access]
-* xref:sync-function.adoc[Sync Function]
+.{empty}
+* xref:starter-overview.adoc[START]
+** xref:starter-install-svr.adoc[Install Server]
+** xref:starter-install-sgw.adoc[Install Sync Gateway]
+** xref:starter-config.adoc[Configure Sync Gateway]
+// * xref:data-modeling.adoc[Data Modeling]
+
+.Advance
+* Some topics go here
+
+* Manage
+** xref:logging.adoc[Logging]
+** xref:stats-monitoring.adoc[Stats Monitoring]
+** xref:sgcollect-info.adoc[SGCollect Info]
+
+* xref:deployment.adoc[Deploy]
+** Sync Gateway on Kubernetes
+*** xref:kubernetes/deploy-cluster.adoc[Deploy a Cluster]
+*** xref:kubernetes/manage-cluster.adoc[Manage a Cluster]
+** xref:upgrade.adoc[Upgrade]
+** xref:security.adoc[Security]
+** xref:load-balancer.adoc[Load Balancer]
+** xref:database-offline.adoc[Taking Databases Offline and Online]
+** xref:os-level-tuning.adoc[OS Level Tuning]
 
 .Learn
-* xref:config-properties.adoc[Configuration File]
+* xref:access-control-overview.adoc[Access Control Overview]
+** xref:users-and-roles.adoc[Users and Roles]
+** xref:authentication.adoc[Authentication]
+** xref:sync-gateway-channels.adoc[Sync Gateway Channels]
+** xref:read-access.adoc[Read Access]
+** xref:write-access.adoc[Write Access]
+** xref:sync-function.adoc[Sync Function]
+// * xref:config-properties.adoc[Configuration File]
 * xref:command-line-options.adoc[CLI]
 * xref:shared-bucket-access.adoc[Mobile-Server Data Sync]
 * xref:managing-tombstones.adoc[Tombstones]
@@ -23,27 +45,15 @@
 * xref:integrating-external-stores.adoc[Integrating External Stores]
 * xref:running-replications.adoc[Inter-cluster Replication]
 * xref:rest-api-client.adoc[REST API Client]
+* xref:user-props.adoc[User Properties]
 
-.Manage
-* xref:logging.adoc[Logging]
-* xref:stats-monitoring.adoc[Stats Monitoring]
-* xref:sgcollect-info.adoc[SGCollect Info]
+.Refer
+* xref:config-properties.adoc[Configuration File]
+* API References
+** xref:rest-api.adoc[Public REST API]
+** xref:admin-rest-api.adoc[Admin REST API]
 
-.xref:deployment.adoc[Deployment]
-* Sync Gateway on Kubernetes
-** xref:kubernetes/deploy-cluster.adoc[Deploy a Cluster]
-** xref:kubernetes/manage-cluster.adoc[Manage a Cluster]
-* xref:upgrade.adoc[Upgrade]
-* xref:security.adoc[Security]
-* xref:load-balancer.adoc[Load Balancer]
-* xref:database-offline.adoc[Taking Databases Offline and Online]
-* xref:os-level-tuning.adoc[OS Level Tuning]
-
-.API References
-* xref:rest-api.adoc[Public REST API]
-* xref:admin-rest-api.adoc[Admin REST API]
-
-.Release Notes & Compatibility
+.Product Information
 * xref:release-notes.adoc[Release Notes]
 * xref:supported-os.adoc[Supported OS]
 * xref:compatibility-matrix.adoc[Compatibility Matrix]
