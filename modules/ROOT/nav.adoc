@@ -2,39 +2,39 @@
 * xref:introduction.adoc[Introduction]
 * xref:index.adoc[What's New]
 
-.{empty}
-* xref:starter-overview.adoc[START]
-** xref:starter-install-svr.adoc[Install Server]
-** xref:starter-install-sgw.adoc[Install Sync Gateway]
-** xref:starter-config.adoc[Configure Sync Gateway]
+//.{empty}
+//* xref:starter-overview.adoc[START]
+.Start
+* xref:starter-install-svr.adoc[Install Server]
+* xref:starter-install-sgw.adoc[Install Sync Gateway]
+* xref:starter-config.adoc[Configure Sync Gateway]
 // * xref:data-modeling.adoc[Data Modeling]
 
 .Advance
-* Some topics go here
-* xref:adv-working-with-tombstones.adoc[Working with tombstones]
+//* xref:adv-working-with-tombstones.adoc[Working with tombstones]
 * Manage
-** xref:logging.adoc[Logging]
-** xref:stats-monitoring.adoc[Stats Monitoring]
-** xref:sgcollect-info.adoc[SGCollect Info]
-
+** xref:command-line-options.adoc[Command Line Config.]
+** xref:stats-monitoring.adoc[Getting SGW metrics]
+** xref:sgcollect-info.adoc[Geting SGW Node stats]
+** xref:load-balancer.adoc[Load Balancing]
+** xref:database-offline.adoc[Taking Databases Offline/Online]
 * xref:deployment.adoc[Deploy]
-** Sync Gateway on Kubernetes
-*** xref:kubernetes/deploy-cluster.adoc[Deploy a Cluster]
-*** xref:kubernetes/manage-cluster.adoc[Manage a Cluster]
-** xref:upgrade.adoc[Upgrade]
-** xref:security.adoc[Security]
-** xref:load-balancer.adoc[Load Balancer]
-** xref:database-offline.adoc[Taking Databases Offline and Online]
-** xref:os-level-tuning.adoc[OS Level Tuning]
+** xref:upgrade.adoc[Upgrading]
+** xref:security.adoc[Securing mobile deployments]
+** xref:os-level-tuning.adoc[Tuning the OS]
+* Sync Gateway on Kubernetes
+** xref:kubernetes/deploy-cluster.adoc[Deploying a Cluster]
+** xref:kubernetes/manage-cluster.adoc[Managing a Cluster]
 
 .Learn
 * xref:concept-fundamentals.adoc[Fundamental SGW concepts]
-** xref:shared-bucket-access.adoc[Mobile-Server Data Sync]
-** xref:concept-tombstones.adoc[Tombstones]
-** xref:indexing.adoc[Indexing]
-** xref:resolving-conflicts.adoc[Resolving Conflicts]
-
-* xref:concept-access-control-ovw.adoc[Access Control Overview]
+//* xref:concept-tombstones.adoc[Tombstones]
+* xref:indexing.adoc[Indexing]
+* xref:logging.adoc[Logging]
+* xref:shared-bucket-access.adoc[Mobile-Server Data Sync]
+* xref:resolving-conflicts.adoc[Resolving Conflicts]
+//* xref:concept-access-control-ovw.adoc[Access Control Overview]
+* Access Control
 ** xref:users-and-roles.adoc[Users and Roles]
 ** xref:authentication.adoc[Authentication]
 ** xref:sync-gateway-channels.adoc[Sync Gateway Channels]
@@ -42,7 +42,6 @@
 ** xref:write-access.adoc[Write Access]
 ** xref:sync-function.adoc[Sync Function]
 // * xref:config-properties.adoc[Configuration File]
-* xref:command-line-options.adoc[CLI]
 * xref:server-integration.adoc[Webhooks and Changes Feed]
 * xref:integrating-external-stores.adoc[Integrating External Stores]
 * xref:running-replications.adoc[Inter-cluster Replication]
@@ -54,7 +53,7 @@
 * API References
 ** xref:rest-api.adoc[Public REST API]
 ** xref:admin-rest-api.adoc[Admin REST API]
-* xref:refer-glossary.adoc[Glossary -- sync gateway terms]
+* xref:refer-glossary.adoc[Glossary]
 
 .Product Information
 * xref:release-notes.adoc[Release Notes]
