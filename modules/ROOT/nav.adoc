@@ -30,7 +30,7 @@
 * xref:concept-fundamentals.adoc[Fundamental SGW concepts]
 * xref:concept-tombstones.adoc[Tombstones]
 * xref:indexing.adoc[Indexing]
-* xref:logging.adoc[Logging]
+* xref:concept-logging.adoc[Logging]
 * xref:shared-bucket-access.adoc[Mobile-Server Data Sync]
 * xref:resolving-conflicts.adoc[Resolving Conflicts]
 * xref:concept-access-control-ovw.adoc[Access Control Overview]

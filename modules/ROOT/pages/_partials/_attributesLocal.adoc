@@ -22,6 +22,8 @@
 
 // SGW Standard text
 :more: Read More
+:idprefix:
+:idseparator: -
 
 // Editions
 :enterprise: enterprise
