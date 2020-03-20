@@ -28,12 +28,12 @@
 
 .Learn
 * xref:concept-fundamentals.adoc[Fundamental SGW concepts]
-//* xref:concept-tombstones.adoc[Tombstones]
+* xref:concept-tombstones.adoc[Tombstones]
 * xref:indexing.adoc[Indexing]
 * xref:logging.adoc[Logging]
 * xref:shared-bucket-access.adoc[Mobile-Server Data Sync]
 * xref:resolving-conflicts.adoc[Resolving Conflicts]
-//* xref:concept-access-control-ovw.adoc[Access Control Overview]
+* xref:concept-access-control-ovw.adoc[Access Control Overview]
 * Access Control
 ** xref:users-and-roles.adoc[Users and Roles]
 ** xref:authentication.adoc[Authentication]
@@ -41,7 +41,6 @@
 ** xref:read-access.adoc[Read Access]
 ** xref:write-access.adoc[Write Access]
 ** xref:sync-function.adoc[Sync Function]
-// * xref:config-properties.adoc[Configuration File]
 * xref:server-integration.adoc[Webhooks and Changes Feed]
 * xref:integrating-external-stores.adoc[Integrating External Stores]
 * xref:running-replications.adoc[Inter-cluster Replication]
