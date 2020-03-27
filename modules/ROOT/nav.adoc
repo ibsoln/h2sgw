@@ -45,7 +45,6 @@
 ** xref:sync-gateway::icr-replication-behavior.adoc[Replication Behavior]
 ** xref:sync-gateway::icr-replication-types.adoc[Replication Types]
 ** xref:sync-gateway::icr-replication-stats.adoc[Replication Stats]
-
 ** xref:sync-gateway::icr-replication-conflict-resolution.adoc[Conflict Resolution]
 //** xref:sync-gateway::icr-running-replications.adoc[Running Replications]
 * xref:sync-gateway::concept-access-control-ovw.adoc[Access Control Overview]
