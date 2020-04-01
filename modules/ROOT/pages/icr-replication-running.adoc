@@ -17,7 +17,6 @@ Information sources include:
 * https://issues.couchbase.com/browse/DOC-6465
 * https://docs.google.com/document/d/13E6JOq8u_AaUd_t8FZEPCAuq7jfkjryecjBQBHE3pG8/edit?ts=5e77c903#heading=h.nsn5wnqrbttx
 
-
 .points to cover also include:
 
 * Replications defined in the root level config that don’t have a local database as source or target will
@@ -32,6 +31,7 @@ endif::[]
 
 [abstract]
 Adhoc replications are run using the xref:{component-sgw}::rest-api-client.adoc[Admin Rest API].
+
 
 
 == Running replications via the REST API
