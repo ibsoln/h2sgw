@@ -6,7 +6,7 @@
 :page-role: panes
 :page-status: {releaseStatus} -- {releaseComments}
 :page-content: conceptual
-include::partial_attributesLocal.adoc[]
+include::partial$_attributesLocal.adoc[]
 :xref-cb-config: xref:{version}@sync-gateway:ROOT:stats-monitoring.adoc#
 
 ifeval::["{releaseStatus}" == "beta"]
