@@ -1,4 +1,4 @@
-= Compatibility Matrix
+
 
 The table below summarizes the compatible versions of Sync Gateway with Couchbase Server.
 
