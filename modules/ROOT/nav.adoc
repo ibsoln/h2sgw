@@ -7,9 +7,9 @@
 * xref:sync-gateway::index.adoc[*What's New*]
 
 .Start
-* xref:sync-gateway::getting-started.adoc[Before you start]
-* xref:sync-gateway::starter-install-sgw.adoc[Install Sync Gateway]
-* xref:sync-gateway::starter-config.adoc[Configure Sync Gateway]
+* xref:sync-gateway::gs-before.adoc[*Before you start*]
+* xref:sync-gateway::gs-configure-sgw.adoc[*Configure*]
+* xref:sync-gateway::gs-install-sgw.adoc[*Install & Sync*]
 
 .Advance
 * xref:sync-gateway::icr-replication-running.adoc[*Running Replications*]
@@ -29,13 +29,13 @@
 ** xref:sync-gateway::kubernetes/manage-cluster.adoc[Manage a Cluster]
 
 .Learn
+* xref:sync-gateway::shared-bucket-access.adoc[*Introducing Data Sync*]
 * xref:sync-gateway::concept-fundamentals.adoc[*Fundamental SGW concepts*]
 ** xref:sync-gateway::concept-fundamentals-data.adoc[*Mobile data concepts*]
 ** xref:sync-gateway::concept-fundamentals-logging.adoc[*Logging*]
 ** xref:sync-gateway::concept-fundamentals-data-tombstones.adoc[*Tombstones*]
 ** xref:sync-gateway::rest-api-client.adoc[REST API Client]
 ** xref:sync-gateway::command-line-options.adoc[CLI]
-** xref:sync-gateway::shared-bucket-access.adoc[Mobile-Server Data Sync]
 ** xref:sync-gateway::managing-tombstones.adoc[Tombstones]
 ** xref:sync-gateway::indexing.adoc[Indexing]
 * xref:sync-gateway::icr-overview.adoc[*Inter Cluster Replication*]
