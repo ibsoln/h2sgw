@@ -1,0 +1,101 @@
+= Sync Gateway Indexing
+:page-layout: article
+:page-role: panes
+:page-status: {releaseStatus} -- {releaseComments}
+:page-content: conceptual
+:page-aliases: indexing
+include::partial$_attributesLocal.adoc[]
+:pg-rest-api-admin: rest-api-admin.adoc
+:pg-rest-api-public: rest-api-public.adoc
+:pg-config-properties: config-properties.adoc
+:xref-cbl: xref:{version}@{component-cbl}:ROOT
+:xref-svr: xref:{version}@{component-svr}:ROOT
+:xref-sgw: xref:2.8@sync-gateway:ROOT
+:xref-rest-api-admin: {xref-sgw}:{pg-rest-api-admin}[Admin REST API]
+:xref-rest-api-admin-query: {xref-sgw}:{pg-rest-api-admin}#query[Admin REST API Query]
+:xref-cfg-props-useviews: {xref-sgw}:{pg-config-properties}#databases-foo_db-use_views[`databases.$db.use_views`]
+:xref-cfg-props--numindxreplicas: {xref-sgw}:{pg-config-properties}#databases-foo_db-num_index_replicas[`databases.$db.num_index_replicas`]
+:xref-shared-bucket: {xref-sgw}:shared-bucket-access.adoc[Introducing Data Sync]
+
+ifeval::["{releaseStatus}" == "beta"]
+[.pane__frame--orange]
+.Author's Notes
+--
+Document the GSI concept and associated processes
+
+Incorporate new styling features
+
+Sources/References
+* Jira: https://issues.couchbase.com/browse/DOC-6421?src=confmacro
+* New Starter Briefing: https://hub.internal.couchbase.com/confluence/display/supp/Lesson+10+-+N1QL+and+GSI
+* Functional use cases: https://docs.google.com/document/d/1RVUz54OK6e_7bwhq3FVZyORFdWIjCFCoAQJVSj19UEk/edit#heading=h.xwnb5b842cqw
+
+Likely pages:
+* {xref-sgw}::cpt-gsi-indexing-functionaldata.adoc[]
+
+
+
+--
+endif::[]
+
+[abstract]
+
+
+
+== Guaranteed Availability
+
+Prior to 2.1, Sync Gateway used system views for a variety of internal operations, including authentication and replication.
+
+Starting in 2.1, Sync Gateway will use GSI and N1QL to perform those tasks.
+
+A key advantage of the switch to GSI is that it supports index replicas, allowing Sync Gateway to reduce the downtime during a server upgrade, rebalance or failover from several hours to a few seconds.
+This change also improves overall query performance.
+Note that this only impacts system views.
+Users can continue to define views through the xref:admin-rest-api.adoc#/query[Sync Gateway Admin REST API].
+This capability is enabled by default and there are 2 properties in the configuration file which can be adjusted:
+
+* xref:config-properties.adoc#databases-foo_db-use_views[`databases.$db.use_views`]
+* xref:config-properties.adoc#databases-foo_db-num_index_replicas[`databases.$db.num_index_replicas`]
+
+NOTE: Use of GSI requires Couchbase Server 5.5, with at least one node running the Index Service.
+Users wanting to run Sync Gateway 2.1 with an older version of Couchbase Server will need to continue to use views, by setting the `use_views` property.
+
+NOTE: By default, Sync Gateway requires the Index Service to be running on at least two Couchbase Server nodes (required for index replica).
+Users can run with a single Index Service node by setting Sync Gateway's `num_index_replicas` property to zero, but this may result in increased downtime in the event of an index node failure.
+
+
+== Related Content
+
+[.pane__frames]
+
+* *How-to*
++
+--
+xref:sync-gateway::gs-configure-sgw.adoc[Configure]
+
+xref:sync-gateway::gs-before.adoc[Before You Start]
+
+xref:sync-gateway::getting-started[Installing Server]
+--
+
+* *Learn more*
++
+--
+xref:sync-gateway::shared-bucket-access.adoc[Introducing Data Sync]
+
+{xref-rest-api-admin}
+
+xref:sync-gateway::rest-api-client.adoc[Introducing REST API]
+
+include tutorial links as relevant
+
+include blog links as relevant
+--
+
+* *Reference material*
++
+--
+xref:sync-gateway::config-properties.adoc[Configuration Schema]
+
+(eg config file or api)
+--

@@ -37,7 +37,7 @@
 ** xref:sync-gateway::rest-api-client.adoc[REST API Client]
 ** xref:sync-gateway::command-line-options.adoc[CLI]
 ** xref:sync-gateway::managing-tombstones.adoc[Tombstones]
-** xref:sync-gateway::indexing.adoc[Indexing]
+** xref:sync-gateway::cpt-gsi-indexing.adoc[Indexing (GSI)]
 * xref:sync-gateway::icr-overview.adoc[*Inter Cluster Replication*]
 ** xref:sync-gateway::icr-replication-high-availability.adoc[*High-Availability*]
 ** xref:sync-gateway::icr-replication-admin.adoc[*Replication Admin*]

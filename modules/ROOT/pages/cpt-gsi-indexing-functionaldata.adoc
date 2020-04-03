@@ -1,0 +1,120 @@
+= Sync Gateway Index Catalog
+:page-layout: article
+:page-role: panes
+:page-status: {releaseStatus} -- {releaseComments}
+:page-content: conceptual
+include::partial$_attributesLocal.adoc[]
+
+// Embedded link variables
+:pg-rest-api-admin: rest-api-admin.adoc
+:pg-rest-api-public: rest-api-public.adoc
+:pg-config-properties: config-properties.adoc
+:xref-cbl: xref:{version}@{component-cbl}:ROOT
+:xref-svr: xref:{version}@{component-svr}:ROOT
+:xref-sgw: xref:2.8@sync-gateway:ROOT
+:xref-rest-api-admin: {xref-sgw}:{pg-rest-api-admin}[Admin REST API]
+:xref-rest-api-admin-query: {xref-sgw}:{pg-rest-api-admin}#query[Admin REST API Query]
+:xref-cfg-props-useviews: {xref-sgw}:{pg-config-properties}#databases-foo_db-use_views[`databases.$db.use_views`]
+:xref-cfg-props--numindxreplicas: {xref-sgw}:{pg-config-properties}#databases-foo_db-num_index_replicas[`databases.$db.num_index_replicas`]
+:xref-shared-bucket: {xref-sgw}:shared-bucket-access.adoc[Introducing Data Sync]
+
+ifeval::["{releaseStatus}" == "beta"]
+[.pane__frame--orange]
+.Author's Notes
+--
+Document the Sync Gateway indexes based on functional use-case document.
+
+Sources/References
+* Jira: https://issues.couchbase.com/browse/DOC-6421?src=confmacro
+* Functional use cases: https://docs.google.com/document/d/1RVUz54OK6e_7bwhq3FVZyORFdWIjCFCoAQJVSj19UEk/edit#heading=h.xwnb5b842cqw
+
+Likely pages:
+* {xref-sgw}:cpt-gsi-indexing.adoc[]
+* {xref-sgw}:cpt-gsi-indexing-functionaldata.adoc[]
+
+
+
+--
+endif::[]
+
+[abstract]
+A definition of Sync Gateway indexes, which summarizes their functional use cases.
+
+
+== Introduction
+
+Sync Gateway installs a set of indexes.  This document summarizes the functional use cases for these indexes, the actual index contents, and information on estimating index size.
+vrsn: {version}
+comp: {component-svr} & {component-cbl}
+
+
+
+== Summary of Indexes
+
+
+
+
+== Index Catalog
+
+
+
+=== Index A
+
+
+
+
+=== Index B
+
+
+
+=== Index C
+
+
+
+=== Index Z ... etc
+
+
+
+
+
+
+
+== Related Content
+
+[.pane__frames]
+
+* *How-to*
++
+--
+xref:sync-gateway::gs-configure-sgw.adoc[Configure]
+
+xref:sync-gateway::gs-before.adoc[Before You Start]
+
+xref:sync-gateway::getting-started[Installing Server]
+--
+
+* *Learn more*
++
+--
+xref:2.8@sync-gateway::shared-bucket-access.adoc[Introducing Data Sync]
+
+{xref-shared-bucket}
+
+{xref-rest-api-admin}
+
+include tutorial links as relevant
+
+include blog links as relevant
+--
+
+* *Reference material*
++
+--
+xref:2.8@sync-gateway::config-properties.adoc[Configuration Schema]
+
+{xref-cfg-props--numindxreplicas}
+
+{xref-cfg-props-useviews}
+
+(eg config file or api)
+--
