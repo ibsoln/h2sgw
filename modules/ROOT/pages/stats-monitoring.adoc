@@ -1159,7 +1159,11 @@ The total number of documents that were pushed since replication started.
 * {attachment_push_count}
 * {auth_failed_count}
 * {auth_success_count}
+<<<<<<< HEAD
 * {chan_cache_compact_count}
+=======
+* {cache_compact_count}
+>>>>>>> DOC-6397-Sync-Gateway-missing stats (#210)
 * {cache_feed}
 * {cache}
 * {cbl_replication_pull}
@@ -1296,4 +1300,8 @@ The total number of documents that were pushed since replication started.
 * {warn_xattr_size_count}
 * {write_processing_time}
 
+<<<<<<< HEAD
 {gotoIndex}
+=======
+{gotoIndex}
+>>>>>>> DOC-6397-Sync-Gateway-missing stats (#210)
