@@ -30,7 +30,6 @@ endif::[]
 :xref-cb-config: xref:#
 :url-golang-memstats: https://golang.org/pkg/runtime/#MemStats
 :goto-url-golang-memstats: {url-golang-memstats}[Go memstats]
-:gotoIndex: <<Alphabetic Index, Back to Index Start>>
 
 :syncgateway: {xref-cb-config}#syncgateway[syncgateway]
 :global: {xref-cb-config}global[global]
@@ -1169,6 +1168,10 @@ The total number of documents that were pushed since replication started.
 [sidebar]
 <</$>> *|* <<A - C>> *|* <<D - G>> *|* <<H - N>> *|* <<P - Z>>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> DOC-6397-Sync-Gateway-missing stats (#210)
 === $
 * {dbname}
 * {replname}
