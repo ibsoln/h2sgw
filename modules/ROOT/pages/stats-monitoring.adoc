@@ -1168,10 +1168,6 @@ The total number of documents that were pushed since replication started.
 [sidebar]
 <</$>> *|* <<A - C>> *|* <<D - G>> *|* <<H - N>> *|* <<P - Z>>
 
-<<<<<<< HEAD
-=======
-
->>>>>>> DOC-6397-Sync-Gateway-missing stats (#210)
 === $
 * {dbname}
 * {replname}
