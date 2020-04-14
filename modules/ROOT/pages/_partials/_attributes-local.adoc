@@ -1,0 +1,39 @@
+// BEGIN
+
+// SGW Version numbers
+:major: 2
+:minor: 7
+:patch: 2
+:version: {major}.{minor}
+:version-full: {major}.{minor}.0
+:version-maint: {major}.{minor}.{patch}
+
+// Couchbase Components
+:component-sgw: sync-gateway
+:component-cbl: couchbase-lite
+:component-cao: operator
+:component-svr: server
+
+// CAO version numbers
+:version_cao: 2.0
+:version_caoFull: 2.0.0
+
+// SGW Standard text
+:more: Read More
+:idprefix:
+:idseparator: -
+
+// Editions
+:enterprise: enterprise
+:entshort: ee
+:community: community
+:commshort: ce
+
+
+:xref-pfx-sgw: xref:{version}@{component-sgw}:
+:xref-pfx-cbl: xref:{version}@{component-cbl}:
+:xref-pfx-svr: xref:{component-svr}:
+:xref-pfx-cao: xref:{component-cao}:
+
+
+// END
