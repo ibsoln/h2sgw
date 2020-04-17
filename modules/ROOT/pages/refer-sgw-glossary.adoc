@@ -5,6 +5,11 @@
 :page-content-type: reference
 include::partial$_attributesLocal.adoc[]
 
+.Items to cover include:
+
+* SG2 Terminilogy https://docs.google.com/document/d/13E6JOq8u_AaUd_t8FZEPCAuq7jfkjryecjBQBHE3pG8/edit#heading=h.e6nktl2sekol
+
+
 // Glosary entry name tag format:
 //  {component} = sgw-
 //  {namespace} = eg. access-control (acc) replication (repl), api, conflicts (conf), indexing (ndx) etc
