@@ -1,8 +1,5 @@
-include::shared-mobile::partial$_attributes-shared.adoc[]
-include::ROOT:partial$_attributes-local.adoc[]
-:xref-pfx-sgw: {xref-pfx-sgw}:
-include::ROOT:partial$_page-index.adoc[]
-
+//* {xref-pfx}couchbase-mobile-index.adoc[*COUCHBASE MOBILE*]
+include::pages/_partials/_attributes-local.adoc[]
 
 // BEGIN::Local Attributes
 :xref-pfx: {xref-pfx-sgw}:
