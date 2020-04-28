@@ -6,8 +6,9 @@ endif::xref-pfx-sgw[]
 // Ref - Page Targets - sync-gateway
 // Ref - xrefs - sync-gateway
 
-:sgw-pg-ad-sgw-cfg-import-filter: advance/ad-sgw-cfg-import-filter.adoc
-:sgw-pg-ad-sgw-cfg-sync-function: advance/ad-sgw-cfg-sync-function.adoc
+:sgw-pg-adv-rest-api-client: advance/adv-rest-api-client.adoc
+:sgw-pg-adv-sgw-cfg-import-filter: advance/adv-sgw-cfg-import-filter.adoc
+:sgw-pg-adv-sgw-cfg-sync-function: advance/adv-sgw-cfg-sync-function.adoc
 :sgw-pg-admin-rest-api: refer/rest-api-admin.adoc
 :sgw-pg-authentication: learn/authentication.adoc
 :sgw-pg-cbmintro: cbmintro.adoc
@@ -53,7 +54,6 @@ endif::xref-pfx-sgw[]
 :sgw-pg-release-notes-archive: prodnotes/pn-release-notes-archive.adoc
 :sgw-pg-release-notes: prodnotes/pn-release-notes.adoc
 :sgw-pg-resolving-conflicts: resolving-conflicts.adoc
-:sgw-pg-rest-api-client: refer/rest-api-client.adoc
 :sgw-pg-rest-api: refer/rest-api-public.adoc
 :sgw-pg-running-replications: running-replications.adoc
 :sgw-pg-security: security.adoc
@@ -67,8 +67,9 @@ endif::xref-pfx-sgw[]
 :sgw-pg-upgrade: upgrade.adoc
 :sgw-pg-users-and-roles: learn/users-and-roles.adoc
 :sgw-pg-write-access: learn/write-access.adoc
-:xref-sgw-pg-ad-sgw-cfg-import-filter: {xref-pfx-sgw}{sgw-pg-ad-sgw-cfg-import-filter}[Use Import Filters]
-:xref-sgw-pg-ad-sgw-cfg-sync-function: {xref-pfx-sgw}{sgw-pg-ad-sgw-cfg-sync-function}[Work With Sync Functions]
+:xref-sgw-pg-adv-rest-api-client: {xref-pfx-sgw}{sgw-pg-adv-rest-api-client}[Use the REST API]
+:xref-sgw-pg-adv-sgw-cfg-import-filter: {xref-pfx-sgw}{sgw-pg-adv-sgw-cfg-import-filter}[Use Import Filters]
+:xref-sgw-pg-adv-sgw-cfg-sync-function: {xref-pfx-sgw}{sgw-pg-adv-sgw-cfg-sync-function}[Work With Sync Functions]
 :xref-sgw-pg-admin-rest-api: {xref-pfx-sgw}{sgw-pg-admin-rest-api}[Admin REST API]
 :xref-sgw-pg-authentication: {xref-pfx-sgw}{sgw-pg-authentication}[Authentication]
 :xref-sgw-pg-cbmintro: {xref-pfx-sgw}{sgw-pg-cbmintro}[About Mobile]
@@ -115,7 +116,6 @@ endif::xref-pfx-sgw[]
 :xref-sgw-pg-release-notes-archive: {xref-pfx-sgw}{sgw-pg-release-notes-archive}[Release Notes Archive]
 :xref-sgw-pg-release-notes: {xref-pfx-sgw}{sgw-pg-release-notes}[Release Notes]
 :xref-sgw-pg-resolving-conflicts: {xref-pfx-sgw}{sgw-pg-resolving-conflicts}[Conflict & Resolution]
-:xref-sgw-pg-rest-api-client: {xref-pfx-sgw}{sgw-pg-rest-api-client}[Use the REST API]
 :xref-sgw-pg-rest-api: {xref-pfx-sgw}{sgw-pg-rest-api}[Public REST API]
 :xref-sgw-pg-running-replications: {xref-pfx-sgw}{sgw-pg-running-replications}[Inter-cluster Replication]
 :xref-sgw-pg-security: {xref-pfx-sgw}{sgw-pg-security}[Security]
