@@ -1,8 +1,11 @@
 = Inter-Cluster Replication
 :page-layout: article
-:page-status: {releaseStatus} -- {releaseComments}
+:page-status: {release-status} -- {release-comments}
+:page-edition: Under Develoment
 :page-roles:
 include::partial$_attributes-local.adoc[]
+:xref-pfx-sgw: {xref-pfx-sgw}:
+include::partial$_glossary-links.adoc[]
 
 ifndef::releaseStatus[:releaseStatus!:]
 ifeval::["{releaseStatus}" == "gamma"]
@@ -14,39 +17,62 @@ Create an overview of the Sync Gateway replication process
 .points to include
 
 * replicator diagram https://docs.google.com/document/d/13E6JOq8u_AaUd_t8FZEPCAuq7jfkjryecjBQBHE3pG8/edit#heading=h.33gfct4o4z8t
+
+
+High level intro with links to appropriate details topics
+
+Document replication concepts and use-cases
+High-availability sync-gateway cluster replication
+Persistent vs Transient replication types
+Replication use cases:
+mobile cluster replications
+cloud-edge/hub-spoke replication
 --
 endif::[]
 
 [abstract]
 --
-This content provides an overview of, and introduction to, Sync Gateway to Sync Gateway replication. Inter-cluster replication, uses SG Replicate protocol to enable replication between mobile clusters, or between a hub and its spoke clusters.
+This content provides an overview of, and introduction to, Sync Gateway to Sync Gateway replication. Inter-cluster replication, uses SG Replicate protocol to enable replication between mobile clusters. That is, for example between a hub and its spoke clusters.
 --
 
-== Overview
+== Use Cases
 
-Couchbase Sync Gateway supports inter-cluster replication. That is, the ability to run replications between two Sync Gateway clusters.
-SG-Replicate 2.0 is the protocol that supports that replication.
-Documents go through the Sync Function on the target Sync Gateway instance, which ensures that access permissions are updated.
-On the architecture diagram below, any changes that users/systems make on either Sync Gateway instance will be replicated to the other Sync Gateway instance.
+Couchbase Sync Gateway supports inter-cluster replication, the ability to run replications between two Sync Gateway clusters and between active mobile clusters.
+
+This is an increasingly important feature and is essential to support _{glos-term-cloud-to-edge-sync}_ use cases. Here data changes must be synchronized between a centralized cloud cluster and a large number (hundreds or thousands) of edge clusters whilst still enforcing fine grained access control.
+
+SG-Replicate 2.0 is the protocol that supports this use-case. It is an integral part of Sync Gateway, acting as the _{glos-term-active-replicator}_, pulling changes from a data source and pushing them to a target.
+
+All documents pass through the target Sync Gateway's _{glos-term-sync-function}_ instance, ensuring that access rules are honored.
+
+In the architecture diagram below, any changes that users/systems make on either Sync Gateway instance will be replicated to the other Sync Gateway instance.
+
+.Inter-cluster cloud-to-edge synchronzation
+image::icr-cloud-to-edge.svg[]
 
 
-.Inter-cluster replication architecture
-image::running-replications.png[]
 
-NOTE: A _Sync Gateway database_ can also be referred to as a namespace for documents, the data is *always* stored in Couchbase Server.
 
-== SG Replicate vs XDCR
+
+
+
+NOTE: A _Sync Gateway database_ can be considered a namespace for documents, the data is *always* stored in Couchbase Server.
+
+== Alternative Methods
 
 xref:server:manage:manage-xdcr/xdcr-management-overview.adoc[XDCR] (cross data centre replication) is the Couchbase Server API to replicate between Couchbase Server clusters.
 Both XDCR and SG Replicate can be used to keep clusters in different data centres in sync.
-However, SG Replicate was designed specifically for a Couchbase Mobile deployment and must be used for replication between mobile clusters.
+However, SG Replicate was designed specifically for Couchbase Mobile deployments and must be used for replication between mobile clusters.
 
 == Features
 
-* Replicates via the Sync Gateway REST API
+* {xref-sgw-pg-icr-high-availability} (HA)
+* {xref-sgw-pg-icr-delta-sync} option
+* Replicates via the Sync Gateway REST API (see: {xref-sgw-pg-adv-rest-api-client})
 * JSON configuration to specify replications
 * Supports multiple replications running concurrently
-* Can run both OneShot and Continuous replications
+* Supports _{glos-term-persistent-replication}_ and _{glos-term-transient-replication}_
+* Leverages the full duplex nature of websockets to support push and pull from a single connection
 * Does not store anything persistently
 * Stateless -- can be interrupted/restarted anytime without negative side effects
 * Can specify which channel(s) to sync
