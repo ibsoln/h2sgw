@@ -35,7 +35,7 @@ endif::[]
 This content provides an overview of, and introduction to, Sync Gateway to Sync Gateway replication. Inter-cluster replication, uses SG Replicate protocol to enable replication between mobile clusters. That is, for example between a hub and its spoke clusters.
 --
 
-== Use Cases
+== Inter-cluster replication
 
 Couchbase Sync Gateway supports _{glos-term-inter-cluster-replication}_, an increasingly important enterprise-level requirement that
 supports _{glos-term-cloud-to-edge} synchronization_ use cases, where data changes must be synchronized between a centralized cloud cluster and a large number of edge clusters whilst still enforcing fine grained access control.
@@ -47,30 +47,35 @@ Inter-cluster repliaction provides the ability to run replications between:
 
 Sync Gateway's inter-cluster replication feature uses the SG-Replicate 2.0  protocol. It is an integral part of Sync Gateway, acting as the _{glos-term-active-replicator}_, pulling changes from a data source and pushing them to a target.
 
+.Inter-cluster replication architecture
+[[icr-architecture]]
+image::icr-replication-overview.svg[]
+
 All documents pass through the target Sync Gateway's _{glos-term-sync-function}_ instance, ensuring that access rules are honored.
+
+In the architecture diagram (<<icr-architecture>>), any changes that users/systems make on either Sync Gateway instance will be replicated to the other Sync Gateway instance.
+
+== Typical Inter-cluster Replication Use Cases
 
 === Cloud-to-Edge Synchronization
 
-In the architecture diagram below, any changes that users/systems make on either Sync Gateway instance will be replicated to the other Sync Gateway instance.
+A typical architecture for this use cases is shown in <<icr-cloud-to-edge>>
 
-.Inter-cluster cloud-to-edge synchronzation
+.Cloud-to-edge synchronization
+[[icr-cloud-to-edge]]
 image::icr-cloud-to-edge.svg[]
 
-=== Active Mobile Synchronization
+=== Active-to-active Mobile Synchronization
 
+The performant SG-replicate 2.0 prototcol is ideal where Sync Gateway, deployments require data replication between active mobile clusters.
 
+A typical architecture for this use cases is shown in <<icr-active-mobile>>
 
-.Inter-cluster cloud-to-edge synchronzation
+.Active-active mobile synchronization
+[[icr-active-mobile]]
 image::icr-active-mobile-sync.svg[]
 
-
-
-
-
-
-NOTE: A _Sync Gateway database_ can be considered a namespace for documents, the data is *always* stored in Couchbase Server.
-
-== Alternative Methods
+=== Alternative Methods
 
 xref:server:manage:manage-xdcr/xdcr-management-overview.adoc[XDCR] (cross data centre replication) is the Couchbase Server API to replicate between Couchbase Server clusters.
 Both XDCR and SG Replicate can be used to keep clusters in different data centres in sync.
@@ -84,7 +89,7 @@ However, SG Replicate was designed specifically for Couchbase Mobile deployments
 * Scalability
 * JSON configuration to specify replications
 * Supports multiple replications running concurrently
-* Supports _{glos-term-persistent-replication}_ and _{glos-term-transient-replication}_
+* Supports multile replication types: _{glos-term-persistent-replication}_ and _{glos-term-transient-replication}_
 * Leverages the full duplex nature of websockets to support push and pull from a single connection
 * Does not store anything persistently
 * Stateless -- can be interrupted/restarted anytime without negative side effects
