@@ -53,25 +53,25 @@ Optional feature in xref:couchbase-lite::swift.adoc#handling-conflicts[Couchbase
 
 == C
 
-[[cloud-to-edge-sync]]
+[[cloud-to-edge]]
 Cloud-to-Edge Sync::
-// tag::sgw-cloud-to-edge-sync-full[]
-// tag::sgw-cloud-to-edge-sync-def[]
-// tag::sgw-cloud-to-edge-sync[]
+// tag::sgw-cloud-to-edge-full[]
+// tag::sgw-cloud-to-edge-def[]
+// tag::sgw-cloud-to-edge[]
 The term _cloud-to-edge_ refers to the multi-cloud deployment mode commonly know as _ship-to-shore_ or _hub-and-spoke_.
-It involves a hierarchy of couchbase mobile clusters, within which a large number of edge clusters sync with one or more clusters in cloud data centers.
-// end::sgw-cloud-to-edge-sync[]
+Cloud-to-edge synchroization scenarios typically involve a hierarchy of couchbase mobile clusters, within which a large number of edge clusters sync with one or more clusters in cloud data centers.
+// end::sgw-cloud-to-edge[]
 +
 Each edge can operate autonomously without network connectivity to the cloud data centers.
 The _edge_ could be, for example a group of retail stores, ships at sea or distribution hubs.
 The number of edges can range from a few hundred to several thousand.
-// end::sgw-cloud-to-edge-sync-def[]
+// end::sgw-cloud-to-edge-def[]
 +
 * _Synonym(s)_: ship-to-shore sync, hub-and-spoke sync
 * _SGW Component_: Inter-cluster replication
 * _Related Term(s)_:
 * _Read More_: {xref-sgw-pg-icr-overview}
-// end::sgw-cloud-to-edge-sync-full[]
+// end::sgw-cloud-to-edge-full[]
 
 {goto-index}
 
@@ -79,9 +79,21 @@ The number of edges can range from a few hundred to several thousand.
 
 //{goto-index}
 
-// == E
+== I
 
-//{goto-index}
+Inter-cluster Replication::
+// tag::sgw-inter-cluster-replication-full[]
+// tag::sgw-inter-cluster-replication-def[]
+// tag::sgw-inter-cluster-replication[]
+The term _inter-cluster replication_ refers to replication between
+two Sync Gateway clusters and-or between Active mobile clusters.
+// tag::sgw-inter-cluster-replication[]
++
+Inter-cluster replication within Sync Gateway is delivered by the SG-Replicate 2.0 protocol, which enables a Sync Gateway replicator to act as the _{glos-term-active-replicator}_, pulling changes from a data source and pushing them to a target.
+// tag::sgw-inter-cluster-replication-def[]
+// tag::sgw-inter-cluster-replication-full[]
+
+{goto-index}
 
 == L
 
