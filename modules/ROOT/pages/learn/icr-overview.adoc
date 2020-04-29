@@ -37,7 +37,7 @@ This content provides an overview of, and introduction to, Sync Gateway to Sync 
 
 == Use Cases
 
-Couchbase Sync Gateway supports inter-cluster replication, an increasingly important enterprise-level requirement that
+Couchbase Sync Gateway supports _{glos-term-inter-cluster-replication}_, an increasingly important enterprise-level requirement that
 supports _{glos-term-cloud-to-edge} synchronization_ use cases, where data changes must be synchronized between a centralized cloud cluster and a large number of edge clusters whilst still enforcing fine grained access control.
 
 Inter-cluster repliaction provides the ability to run replications between:
@@ -45,15 +45,23 @@ Inter-cluster repliaction provides the ability to run replications between:
 * Sync Gateway clusters
 * Active mobile clusters.
 
-SG-Replicate 2.0 is the protocol that supports this use-case. It is an integral part of Sync Gateway, acting as the _{glos-term-active-replicator}_, pulling changes from a data source and pushing them to a target.
+Sync Gateway's inter-cluster replication feature uses the SG-Replicate 2.0  protocol. It is an integral part of Sync Gateway, acting as the _{glos-term-active-replicator}_, pulling changes from a data source and pushing them to a target.
 
 All documents pass through the target Sync Gateway's _{glos-term-sync-function}_ instance, ensuring that access rules are honored.
+
+=== Cloud-to-Edge Synchronization
 
 In the architecture diagram below, any changes that users/systems make on either Sync Gateway instance will be replicated to the other Sync Gateway instance.
 
 .Inter-cluster cloud-to-edge synchronzation
 image::icr-cloud-to-edge.svg[]
 
+=== Active Mobile Synchronization
+
+
+
+.Inter-cluster cloud-to-edge synchronzation
+image::icr-active-mobile-sync.svg[]
 
 
 
