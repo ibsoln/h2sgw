@@ -81,6 +81,7 @@ The number of edges can range from a few hundred to several thousand.
 
 == I
 
+[[inter-cluster-replication]]
 Inter-cluster Replication::
 // tag::sgw-inter-cluster-replication-full[]
 // tag::sgw-inter-cluster-replication-def[]
