@@ -67,7 +67,7 @@ properties:
 
               Setting to `false` will cause Sync Gateway to reject any attempt to write conflicting revisions (returning a `409` HTTP status code). It will be up to the client to resolve the conflict. Restarting Sync Gateway with this property enabled will not automatically result in disk space savings (compaction on a document won't occur until a document is updated).
 
-              Further documentation to use this feature whilst running replications between Sync Gateway instances can be found [here](running-replications.html#limitations).
+              Further documentation to use this feature whilst running replications between Sync Gateway instances can be found [here](learn/icr-running.html#limitations).
             default: 'true'
           allow_empty_password:
             type: boolean
@@ -325,7 +325,7 @@ properties:
           enable_shared_bucket_access:
             type: boolean
             description: |
-              Introduced in Sync Gateway 1.5, this property specifies whether to enable Mobile-Server Data Sync (a.k.a _mobile convergence_). You can learn more about this functionality [here](https://docs.couchbase.com/sync-gateway/current/shared-bucket-access.html)
+              Introduced in Sync Gateway 1.5, this property specifies whether to enable Mobile-Server Data Sync (a.k.a _mobile convergence_). You can learn more about this functionality [here](shared-bucket-access.html)
 
               This property works in conjunction with the [import_docs](#databases-example_db-import_docs) property.
 
@@ -547,8 +547,8 @@ properties:
               - `revs_limit` minimum = 20
 
               See also:
-              - Sync Gateway purge endpoint [/{db}/_purge](admin-rest-api.html#/document/post__db___purge).
-              - Sync Gateway [document TTLs](admin-rest-api.html#/document/put__db___doc_).
+              - Sync Gateway purge endpoint [/{db}/_purge](rest-api-admin.html#/document/post__db___purge).
+              - Sync Gateway [document TTLs](rest-api-admin.html#/document/put__db___doc_).
 
             default: see Default and Minimum Values table in Description
             minimum: see Default and Minimum Values table in Description
@@ -650,7 +650,7 @@ properties:
           sync:
             type: string
             description: |
-              The sync function is a JavaScript function whose source code is stored in the Sync Gateway's database configuration file. Every time a new document, revision or deletion is added to a database, the sync function is called and given a chance to examine the document (see the [Sync Function API guide](sync-function.html)).
+              The sync function is a JavaScript function whose source code is stored in the Sync Gateway's database configuration file. Every time a new document, revision or deletion is added to a database, the sync function is called and given a chance to examine the document (see the [Sync Function API guide](advance/adv-sgw-cfg-sync-function.adoc.html)).
 
               If a document is in conflict there will be multiple current revisions. The default, the "winning" one is the one whose channel assignments and access grants take effect.
 
@@ -684,7 +684,7 @@ properties:
                     description: The user's password.
                   admin_channels:
                     type: array
-                    description: The list of channels this user is automatically granted access to when Sync Gateway starts. If `"*"` is specified then the user is granted access to the [star channel](sync-gateway-channels.html#special-channels) which contains all documents.
+                    description: The list of channels this user is automatically granted access to when Sync Gateway starts. If `"*"` is specified then the user is granted access to the [star channel](./../learn/sync-gateway-channels.html#special-channels) which contains all documents.
                     items:
                       type: string
                   admin_roles:
