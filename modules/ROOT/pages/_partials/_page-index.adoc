@@ -1,7 +1,11 @@
-ifndef::xref-pfx-sgw[]
-:xref-pfx-sgw: xref:sync-gateway::
+// BEGIN::EnterPage
+// We don't know if the xref prefix exists, or what it is set to
+// So save a copy of it if it does and create one we know works
+ifdef::xref-pfx-sgw[]
+:save-xref-pfx-sgw: {xref-pfx-sgw}
 endif::xref-pfx-sgw[]
-
+:xref-pfx-sgw: xref:sync-gateway::
+// END::EnterPage
 
 // Ref - Page Targets - sync-gateway
 // Ref - xrefs - sync-gateway
@@ -13,7 +17,7 @@ endif::xref-pfx-sgw[]
 :sgw-pg-authentication: learn/authentication.adoc
 :sgw-pg-cbmintro: cbmintro.adoc
 :sgw-pg-command-line-options: command-line-options.adoc
-:sgw-pg-compatibility-matrix: prodnotes/pn-compatibility.adoc
+:sgw-pg-compatibility: prodnotes/pn-compatibility.adoc
 :sgw-pg-concept-fundamentals-data-tombstones: learn/concept-fundamentals-data-tombstones.adoc
 :sgw-pg-concept-fundamentals-data: learn/concept-fundamentals-data.adoc
 :sgw-pg-concept-fundamentals-logging: learn/concept-fundamentals-logging.adoc
@@ -74,7 +78,7 @@ endif::xref-pfx-sgw[]
 :xref-sgw-pg-authentication: {xref-pfx-sgw}{sgw-pg-authentication}[Authentication]
 :xref-sgw-pg-cbmintro: {xref-pfx-sgw}{sgw-pg-cbmintro}[About Mobile]
 :xref-sgw-pg-command-line-options: {xref-pfx-sgw}{sgw-pg-command-line-options}[CLI Configuration]
-:xref-sgw-pg-compatibility-matrix: {xref-pfx-sgw}{sgw-pg-compatibility-matrix}[Compatibility Matrix]
+:xref-sgw-pg-compatibility: {xref-pfx-sgw}{sgw-pg-compatibility}[Compatibility Matrix]
 :xref-sgw-pg-concept-fundamentals-data-tombstones: {xref-pfx-sgw}{sgw-pg-concept-fundamentals-data-tombstones}[Tombstones]
 :xref-sgw-pg-concept-fundamentals-data: {xref-pfx-sgw}{sgw-pg-concept-fundamentals-data}[Mobile data learn/concepts]
 :xref-sgw-pg-concept-fundamentals-logging: {xref-pfx-sgw}{sgw-pg-concept-fundamentals-logging}[Logging]
@@ -128,3 +132,10 @@ endif::xref-pfx-sgw[]
 :xref-sgw-pg-upgrade: {xref-pfx-sgw}{sgw-pg-upgrade}[Upgrade]
 :xref-sgw-pg-users-and-roles: {xref-pfx-sgw}{sgw-pg-users-and-roles}[Users and Roles]
 :xref-sgw-pg-write-access: {xref-pfx-sgw}{sgw-pg-write-access}[Write Access]
+
+// BEGIN::ExitPage
+// Restore saved xref-pfx-sgw content if exists
+ifdef::save-xref-pfx-sgw[]
+:xref-pfx-sgw: {save-xref-pfx-sgw}
+endif::save-xref-pfx-sgw[]
+// END::ExitPage
