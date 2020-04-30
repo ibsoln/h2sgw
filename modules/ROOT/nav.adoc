@@ -104,6 +104,6 @@ include::shared-mobile::partial$nav-shared.adoc[]
 * {xref-sgw-pg-release-notes}
 * {xref-sgw-pg-release-notes-archive}
 * {xref-sgw-pg-supported-os}
-* {xref-sgw-pg-compatibility-matrix}
+* {xref-sgw-pg-compatibility}
 // END::MENU STRUCTURE
 // END::NAV
