@@ -3,7 +3,7 @@
 :page-edition: Under development
 :page-layout: article
 :page-content-type: reference
-:page-role: panes
+:page-role: panes -toc
 :page-aliases: reelase-notes
 :description: Sync Gateway Installation Document
 :keywords: edge nosql api synchronization replication
@@ -18,18 +18,22 @@ include::ROOT:partial$_page-index.adoc[]
 This content provides release information pertaining to Sync Gateway {page-component-version} and subsequent maintenance releases.
 --
 
+[.pane__frames--auto .narrow]
 == Version {page-component-version}
+
+[.pane__frame--blue. one-third ]
+.{empty}
 * Original Release Date: *{version-date}*
 * This Patch Version: *unpatched*
 * This Patch Version Date: n/a
 //* This Patch Version: *{version-maint}*
 //* This Patch Version Date: *{version-maint-date}*
 
-[.pane__frames--auto.conceal-title]
-== {empty}
+[.no-color]
 
 .Quick Links
-* <<Enhancements>> *|* <<Major Changes,Major Changes>> *|* <<Support Notices>> *|* <<known-errors-and-resolved-issues, Issues>> *|* <<Upgrading>> *|* <<Compatibility>>
+* <<Enhancements>> *|* <<Major Changes,Major Changes>> *|* <<Support Notices>>
+* <<known-errors-and-resolved-issues, Issues>> *|* <<Upgrading>> *|* <<Compatibility>>
 
 == Enhancements
 
