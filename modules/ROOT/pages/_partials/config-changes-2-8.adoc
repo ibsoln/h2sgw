@@ -1,0 +1,102 @@
+:page-partial:
+
+== Structural Schema Changes
+
+The replication configuration has moved.
+Previously a top-level property, it is now defined within a database-specific property.
+Note that any given database can still have multiple replications configured.
+
+Constraint: SG-Replicate 2 does not support replication between two remote hosts via a third Sync Gateway.
+
+== Removed Properties
+
+The following replication configuration properties are either removed from _ReplicationConfig_, or remain but are non-functional:
+
+create_target::
+_Non-functional_.
+This remains in `ReplicationConfig` but is redundant for Couchbase Server-backed use cases.
+
+proxy::
+_Non-functional_.
+
+doc_ids::
+_Non-functional_.
+
+//Present in ReplicationConfig but non-functional today.  If we decide to add support for doc_id-based replication filters, we should use filter/query_params.
+
+source::
+_Removed - redundant_.
++
+This property is, implicitly, the database associated with the replication.
+
+[[target-property,target]]
+target::
+_Removed - redundant_.
++
+This property is replaced by the `<<remote-property>>` property.
+
+async::
+_Removed - redundant_.
++
+Requests to `_replicate API` *always* run in async mode, now that the status of a completed one-shot replication is available in active_tasks.
++
+This _REST-API-only_ parameter was formerly the method used to force a request to start without awaiting completion of one-shot replications (that is, to run asynchronuously).
+
+changes_feed_limit::
+_Removed - redundant_.
+
+== New Configuration Properties
+
+The following new properties are added:
+
+[[remote-property, remote]]
+remote::
+This property represents a database URL for the remote Sync Gateway.
+To use another database hosted on this Sync Gateway, specify its full Sync Gateway database URL here.
++
+This property replaces the former <<target-property>>.
+
+direction::
+
+Valid values are push, pull, and push_and_pull.
+
+conflict_resolution_type::
+
+Valid values are default, local_wins, remote_wins, custom
+
+custom_conflict_resolver::
+
+Javascript function for conflict resolution.  Only valid when conflict_resolution_type = custom
+
+purge_on_removal::
+Boolean value for whether channel removals should trigger purge
+Defaults to false
+
+enable_delta_sync::
+Boolean value for whether to enable delta sync for this replication.
+
+maximum_backoff_time::
+Amount of time to keep retrying unreachable targets for
+state
+
+Replication state::
+Possible values in replicationStatus response are stopping, stopped, starting, active
+Valid values in configuration or in payload to replication endpoint are stopping, starting
+
+== Maintained Configuration Properties
+The following replication configuration properties are maintained:
+
+* continuous
+* filter
+* query_params
+
+== Modified Configuration Properties
+
+The following replication configuration properties have changed:
+
+cancel::
+This property requests a running replication stop. It is valid *only* when using ReplicationConfig for _replicate REST API calls.
++
+If defined in the configuration schema, it will log an error and prevent start up.
++
+When used in the REST API, you must specify the `replication_id` of a running replication or the request will return an error.
