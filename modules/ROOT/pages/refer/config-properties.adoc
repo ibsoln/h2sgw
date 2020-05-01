@@ -8,6 +8,8 @@ include::partial$_attributesLocal.adoc[]
 
 ifndef::releaseStatus[:releaseStatus!:]
 ifeval::["{releaseStatus}" == "gamma"]
+
+
 [.pane__frame--orange]
 .Author's Notes
 --
@@ -36,11 +38,14 @@ The file's contents include, for example:
 
 The majority of the configuration is achieved using standard JSON syntax -- see <<Configuration Reference>> for more.
 
+.Syntax-exception
 [NOTE]
 ====
 The `sync-gateway-config.json` file relies on the use of one _relaxed_ JSON feature; the use of back ticks  (`++`++`).
+
 Text between back ticks is treated as a string.
 It can span multiple lines and contain double-quotes.
+
 Those features make it ideal for the JavaScript used in `sync` and `import_filter` functions.
 ====
 
@@ -53,9 +58,9 @@ sync_gateway sync-gateway-config.json
 ----
 
 == Configuration Reference
+This content presents the Sync Gateway Configuration schema, with click-through links to an explanation of the properties.
 
 json_config_ui::{attachmentsdir}/sg.yaml[]
-
 
 
 == Related Content
