@@ -119,7 +119,7 @@ Expected behavior
 https://docs.google.com/document/d/13E6JOq8u_AaUd_t8FZEPCAuq7jfkjryecjBQBHE3pG8/edit#heading=h.vwjngb7h5lpm
 --
 
-[.pane__frames--auto.cols-3]
+[.pane__frames.cols-3]
 == Related Content
 
 .How-to ...

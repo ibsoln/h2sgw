@@ -18,7 +18,7 @@ include::ROOT:partial$_page-index.adoc[]
 This content provides release information pertaining to Sync Gateway {page-component-version} and subsequent maintenance releases.
 --
 
-[.pane__frames--auto .narrow]
+[.pane__frames .narrow]
 == Version {page-component-version}
 
 [.pane__frame--blue. one-third ]
@@ -122,7 +122,7 @@ NOTE: Section not yet updated, will likely be an include from compatibility.adoc
 
 
 
-[.pane__frames--auto.cols-3]
+[.pane__frames.cols-3]
 == Related Content
 
 .How-to:
