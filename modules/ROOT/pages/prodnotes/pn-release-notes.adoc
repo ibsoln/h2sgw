@@ -58,7 +58,7 @@ Content describes API differences.
 === Configuration Changes
 This section identifies the changes to the Sync Gateway Configuration Schema for Release {page-component-version}
 
-include::partial$config-changes-2-8.adoc[leveloffset=2]
+include::partial$config-changes.adoc[tag=2-8-0,leveloffset=2]
 
 == Support Notices
 
