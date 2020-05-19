@@ -421,6 +421,7 @@ The configuration file and logs are located in `/Users/sync_gateway`.
 --
 ====
 
+[.pane__frames.cols-3]
 == Related Information
 
 .Next Steps
