@@ -111,7 +111,11 @@ Deployments  must implement a custom conflict resolver in an external app as spe
 To avoid this, the application must ensure concurrent, cross-cluster updates are not made to a given document.
 
 
+<<<<<<< HEAD
 [.pane__frames--auto.cols-3]
+=======
+[.pane__frames.cols-3]
+>>>>>>> Building overview topic, icluding:
 == Related Content
 
 .How-to ...
@@ -130,8 +134,4 @@ To avoid this, the application must ensure concurrent, cross-cluster updates are
 
 * Reference content
 ** {xref-sgw-pg-config-properties}
-include::partial$_related-content[tags=community]
-* Further Learning
-** {xref-url-cb-forum-mobile}
-** {xref-url-cb-blog}
-** https://docs.couchbase.com/tutorials/index.html[Tutorials]
+include::partial$_related-content.adoc[tags=community]
