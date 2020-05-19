@@ -9,7 +9,7 @@ include::shared-mobile::partial$_attributes-shared.adoc[]
 include::partial$_attributes-local.adoc[]
 :xref-pfx-sgw: {xref-pfx-sgw}:
 include::partial$_page-index.adoc[]
-include::partial$_glossary-links.adoc[]
+// include::partial$_glossary-links.adoc[]
 
 ifndef::releaseStatus[:releaseStatus!:]
 ifeval::["{releaseStatus}" == "gamma"]
@@ -88,7 +88,8 @@ json_config_ui::{attachmentsdir}/sg.yaml[]
 
 .Dive Deeper
 * Reference material
-** {xref-sgw-pg-rest-api-client}
-** {xref-sgw-pg-rest-api-client}
+** {xref-sgw-pg-admin-rest-api}
+** {xref-sgw-pg-rest-api}
 
-include::partial$_related-content[tags=community]
+include::partial$_related-content.adoc[tags=community]
+
