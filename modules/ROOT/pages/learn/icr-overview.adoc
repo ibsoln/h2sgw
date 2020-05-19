@@ -110,7 +110,6 @@ When running two Sync Gateway clusters with the no-conflicts mode enabled, cross
 Deployments  must implement a custom conflict resolver in an external app as specified xref:resolving-conflicts.adoc[here].
 To avoid this, the application must ensure concurrent, cross-cluster updates are not made to a given document.
 
-
 [.pane__frames.cols-3]
 == Related Content
 
