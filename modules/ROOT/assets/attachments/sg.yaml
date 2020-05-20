@@ -715,7 +715,7 @@ properties:
             type: array
             description: |2
 
-              This **replications** property is where you configure all replications required for this database.
+              The **replications** property is where you configure all replications required for this database.
               The *replications* array will contain an entry for each replication, allowing multiple replications to be defined for any given database.
 
               Your replications can be one of two available types see [replication types](./../learn/icr-replication-types.html) --
@@ -726,11 +726,11 @@ properties:
 
               - Adhoc - runs once when created
 
-                These replications are initiated using the REST API's *_replication* endpoint.
-                The replications are not guaranteed to run on the initiating node and will instead be distribute across available nodes.
+                _Adhoc_ replications are initiated using the REST API's *_replication* endpoint.
+                The replications are not guaranteed to run on the initiating node and will instead be distributed across available nodes.
 
 
-              *NOTE*: Replications are now defined in the context of a (local) database, with the replication pulling-to or pushing-from this database.
+              *NOTE*: Replications are defined in the context of a (local) database, with the replication pulling-to or pushing-from this database.
 
               **CAUTION**: The method of defining replications at the global level, used prior to version 2.8, is **deprecated**.
               For instructions on how to change over see [Upgrading to v2.8](./../advance/deploy/upgrade.html).
@@ -747,7 +747,7 @@ properties:
                   default: 50
                   description: |2
                     The **changes_feed_limit** property is now deprecated.
-                    It was previously usedd to define the maximum number of change entries pulled in each loop of a continuous changes feed.
+                    It was previously used to define the maximum number of change entries pulled in each loop of a continuous changes feed.
 
                     NOTE -- Removed. This item is replaced by the 'perf-tuning-params' at version 2.8
 
@@ -778,7 +778,7 @@ properties:
                   type: boolean
                   default: false
                   description: |2
-                    The **contniuous** configruation property specifies whether this replication will run in continuous mode, or not; the default being not.
+                    The **contniuous** configuration property specifies whether this replication will run in continuous mode, or not; the default being not.
 
                     OPTIONAL for stops and removes
 
@@ -790,11 +790,11 @@ properties:
 
                     The property is *mandatory* when *conflict_resolution_type=CUSTOM*
 
-                    Provide the function as described for the 'sync' property; that is as a string within backticks.
+                    Provide the function as a string within backticks; as described for the 'sync' property.
 
                     *NOTE*: This property is ignored if *conflict-resolution-type=DEFAULT*
 
-                    **CAUTION**: The use of complex *custom_conflict_resolver* functions can lead to noticeable performance degradation. Users are advised to use the default (or built-in) resolves whenever possible.
+                    **CAUTION**: The use of complex *custom_conflict_resolver* functions can lead to noticeable performance degradation. You should use a default (or built-in) resolver whenever possible.
 
                 direction:
                   type: string
@@ -814,6 +814,24 @@ properties:
 
                     NOTE -- replications created prior to version 2.8 run with *enable_delta_sync=false*.
 
+                    **Database Level Disabled on Target**
+
+                     |   | Delta Sync Config1  | | Delta Sync Config2
+                    :-------------- | --- | :-------------- | :--- | :---------------
+                    Source  |   | Database Level Enabled or Disabled (Irrelevant). Replicator Level Disabled. |    | Database Level Enabled or Disabled (Irrelevant). Replicator Level Enabled. |
+                    Target  |   |Database Level Disabled. Replicator Level : N/A |   | Database Level Disabled. Replicator Level : N/A |
+                    Behavior for Replication with SG-Replicate 2 |    | Delta Sync Disabled |  | Delta Sync Disabled  |
+
+                    **Database Level Enabled on Target**
+
+                     |   | Delta Sync Config1  | | Delta Sync Config2
+                    :-------------- | --- | :-------------- | :--- | :---------------
+                    Source  |   | Database Level Enabled or Disabled (Irrelevant). Replicator Level Disabled. |    | Database Level Enabled or Disabled (Irrelevant). Replicator Level Enabled. |
+                    Target  |   |Database Level Enabled. Replicator Level : N/A |   | Database Level Enabled. Replicator Level : N/A |
+                    Behavior for Replication with SG-Replicate 2 |    | Delta Sync Disabled |  | Delta Sync Disabled  |
+
+
+
                 filter:
                   type: string
                   description: |2
@@ -827,16 +845,13 @@ properties:
                   type: integer
                   default: 5
                   description: |2
-                    ** OR IS IT reconnect_interval?
-
-                    The **maximum_backoff_time** configuration property specifies the time-period (in minutes) during which Sync Gateway will attmpt to reconnect lost or unreachable *remote* targets.
+                    The **maximum_backoff_time** configuration property specifies the time-period (in minutes) during which Sync Gateway will attempt to reconnect lost or unreachable *remote* targets.
 
                     On disconnection Sync Gateway will do an exponential backoff up to the specified value, after which it will attempt to reconnect indefinitely every *maximum_backoff_time* minutes.
 
                     If a zero value is specified then Sync Gateway will do exponential backoff up to an interval of five minutes before stopping the replication.
 
                     NOTE -- this value defaults to five minutes for replications created prior to version 2.8.
-
                 perf_tuning_params:
                   type: array
                   description: |2
@@ -861,7 +876,8 @@ properties:
                   description: |2
                     The **query_params** configuration property defines a set of key/value pairs used in the query string of the replication.
 
-                    For example, you may use the *channels* field to *pull* from a specific set of *channels*. To do so, you would also need to set the *filter* to  *sync_gateway/bychannels* (as shown above).
+                    For example, you may use the *channels* field to *pull* from a specific set of *channels*.
+                    To do so, you would also need to set the *filter* to  *sync_gateway/bychannels* (as shown above).
 
                     OPTIONAL for stops and removes (even if defined during creation)
                   items:
@@ -894,7 +910,7 @@ properties:
 
                     If no *replication_id* is specified, Sync Gateway will assign a random UUID to the new replication
 
-                    If the 'cancel' property (_replicate REST API calls only) is true, this *replication_id* identifies which active replication task to cancel.
+                    **For _replicate REST API calls only** -- If the 'cancel' property is true, this *replication_id* identifies which active replication task to cancel.
 
                 source:
                   type: string
@@ -902,19 +918,17 @@ properties:
                     The **source** property is now deprecated.
                     It was prevously used to identify the database to copy revisions from.
 
-                    This option maybe :
+                    Valid options were :
                       - a string containing a local database name
                       - a remote database URL
                       - an object whose url property contains the database name or URL.
                         Also an object can contain a headers property that contains custom header values such as a cookie.
 
-                    *NOTE* -- Non-functional.
-                    Source is no longer valid for SG Replicate 2 (version 2.8+)
-
+                    *NOTE* -- Non-functional, this property is no longer valid for SG Replicate 2 (version 2.8+)
                 state:
                   type: string
                   description: |2
-                    The optional **state** configruation property is used to specify that the replication must be launched in “Stopped” mode
+                    The optional **state** configuration property is used to specify that the replication must be launched in “Stopped” mode
 
                     All replications are configured with a state on Sync Gateway launch.
                     If omitted, the state defaults to “Running”.
@@ -925,12 +939,11 @@ properties:
                   type: string
                   description: |2
                     The target property is now deprecated.
-                    It was previously used to identify the database Sync Gateway will copy revisions to.
+                    It was previously used to identify the database Sync Gateway would copy revisions to.
 
                     This property shares the same format and interpretation as 'source'.
 
                     *NOTE*: Replaced by 'remote'
-
 
           # END: Define sync-gateway repications
           #
