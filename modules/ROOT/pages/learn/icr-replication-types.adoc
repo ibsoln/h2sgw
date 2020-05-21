@@ -79,7 +79,14 @@ With _SG Replicate 2.0_ you can configure all nodes with the replicators.
 
 == Transient Replication
 
-Started dynamically using the xref:sync-gateway::rest-api-client.adoc[Admin Rest API].
+[.pane__frame--orange]
+.Author's Notes
+--
+expand an-or edit this section, cross check with design spec.
+include links to glossary content for content-reuse purposes
+--
+
+Started dynamically using the xref:sync-gateway::rest-api-client.adoc[Admin Rest API] endpoint `_replication`.
 
 .Points to cover include
 --
@@ -88,32 +95,21 @@ Adhoc are transient replicators that only run once when started. These are predo
 These replications are transient and not persisted. This is useful if users want to setup  replications on-demand after Sync Gateway is started, for instance a replication that needs to be scheduled to be run at midnight every Thursday. In this case, it is likely that there is an automation script that schedules the adhoc replication on a predefined schedule. Or an emergency one-time update that needs to be pushed out to all edge from primary data clusters.
 --
 
+
+[.pane__frames.cols-3]
 == Related Content
 
-[.pane__frames]
+.How-to ...
 
-* *How-to*
-+
---
-include how-to links as relevant,
+* include how-to links as relevant,
+* include how-to links as relevant,
 
-include how-to links as relevant,
---
+.Learn more ...
 
-* *Learn more*
-+
---
-include any related concept links
+include::partial$_related-content.adoc[tags=icr]
 
-include tutorial links as relevant
+.Dive Deeper ...
 
-include blog links as relevant
---
-
-* *Reference material*
-+
---
-include any reference docs
-
-(eg config file or api)
---
+* Reference content
+** {xref-sgw-pg-config-properties}
+include::partial$_related-content.adoc[tags=community]
