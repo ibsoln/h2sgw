@@ -50,31 +50,6 @@ Inter-cluster replication provides the ability to run replications between:
 
 Sync Gateway's inter-cluster replication feature uses the SG-Replicate 2.0  protocol. It is an integral part of Sync Gateway, acting as the _{glos-term-active-replicator}_, pulling changes from a data source and pushing them to a target.
 
-== Features
-
-[.pane__frame--orange]
-.Author's Notes
---
-Expand on the following list. Include cross-references to their topic page/section as appropriate
---
-
-* Persistent vs Transient replication types
-* Replication use cases: see <<typical-inter-cluster-replication-use-cases, Started - see above>>
-** Mobile cluster replications
-** Cloud-edge/hub-spoke replication
-* {xref-sgw-pg-icr-high-availability} (HA)
-* {xref-sgw-pg-icr-delta-sync} option
-* Replicates via the Sync Gateway REST API (see: {xref-sgw-pg-adv-rest-api-client})
-* Scalability
-* JSON configuration to specify replications
-* Supports multiple replications running concurrently
-* Supports multile replication types: _{glos-term-persistent-replication}_ and _{glos-term-transient-replication}_
-* Leverages the full duplex nature of websockets to support push and pull from a single connection
-* Does not store anything persistently
-* Stateless -- can be interrupted/restarted anytime without negative side effects
-* Can specify which channel(s) to sync
-* Supports Primary/Primary and Primary/Secondary topologies
-
 .Inter-cluster replication architecture
 [[icr-architecture]]
 image::icr-replication-overview.svg[]
