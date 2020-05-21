@@ -1,0 +1,4 @@
+= Configuration Schema Change Log
+
+
+include::partial$config-changes.adoc[tag=all]

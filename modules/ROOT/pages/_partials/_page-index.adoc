@@ -18,6 +18,7 @@ endif::xref-pfx-sgw[]
 :sgw-pg-concept-fundamentals-logging: learn/concept-fundamentals-logging.adoc
 :sgw-pg-concept-fundamentals: learn/concept-fundamentals.adoc
 :sgw-pg-config-properties: refer/config-properties.adoc
+:sgw-pg-config-change-log: prodnotes/pn-config-change-log.adoc
 :sgw-pg-data-modeling: data-modeling.adoc
 :sgw-pg-database-offline: database-offline.adoc
 :sgw-pg-deploy-cluster: advance/kubernetes/deploy-cluster.adoc
@@ -79,6 +80,7 @@ endif::xref-pfx-sgw[]
 :xref-sgw-pg-concept-fundamentals-logging: {xref-pfx-sgw}{sgw-pg-concept-fundamentals-logging}[Logging]
 :xref-sgw-pg-concept-fundamentals: {xref-pfx-sgw}{sgw-pg-concept-fundamentals}[Other key learn/concepts ...]
 :xref-sgw-pg-config-properties: {xref-pfx-sgw}{sgw-pg-config-properties}[Configuration Schema]
+:xref-sgw-pg-config-change-log: {xref-pfx-sgw}{sgw-pg-config-change-log}[Configuration Changes]
 :xref-sgw-pg-data-modeling: {xref-pfx-sgw}{sgw-pg-data-modeling}[Data Modeling]
 :xref-sgw-pg-database-offline: {xref-pfx-sgw}{sgw-pg-database-offline}[Taking Databases Offline and Online]
 :xref-sgw-pg-deployment: {xref-pfx-sgw}{sgw-pg-deployment}[Deploy]
