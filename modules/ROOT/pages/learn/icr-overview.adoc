@@ -67,7 +67,7 @@ Expand on the following list. Include cross-references to their topic page/secti
 --
 
 * Persistent vs Transient replication types
-* Replication use cases: see <<typical-inter-cluster-replication-use-cases, Started - see above>>
+* Replication use cases: see <<typical-inter-cluster-replication-use-cases, Started - see below>>
 ** Mobile cluster replications
 ** Cloud-edge/hub-spoke replication
 * {xref-sgw-pg-icr-high-availability} (HA)
