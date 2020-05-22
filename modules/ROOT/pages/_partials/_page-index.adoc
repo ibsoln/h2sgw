@@ -14,6 +14,7 @@ endif::xref-pfx-sgw[]
 :sgw-pg-adv-sgw-cfg-import-filter: advance/adv-sgw-cfg-import-filter.adoc
 :sgw-pg-adv-sgw-cfg-sync-function: advance/adv-sgw-cfg-sync-function.adoc
 :sgw-pg-admin-rest-api: refer/rest-api-admin.adoc
+:sgw-pg-rest-api-admin: refer/rest-api-admin.adoc
 :sgw-pg-authentication: learn/authentication.adoc
 :sgw-pg-cbmintro: cbmintro.adoc
 :sgw-pg-command-line-options: command-line-options.adoc
@@ -122,6 +123,7 @@ endif::xref-pfx-sgw[]
 :xref-sgw-pg-release-notes-archive: {xref-pfx-sgw}{sgw-pg-release-notes-archive}[Release Notes Archive]
 :xref-sgw-pg-release-notes: {xref-pfx-sgw}{sgw-pg-release-notes}[Release Notes]
 :xref-sgw-pg-resolving-conflicts: {xref-pfx-sgw}{sgw-pg-resolving-conflicts}[Conflict & Resolution]
+:xref-sgw-pg-rest-api-admin: {xref-pfx-sgw}{sgw-pg-admin-rest-api}[Admin REST API]
 :xref-sgw-pg-rest-api: {xref-pfx-sgw}{sgw-pg-rest-api}[Public REST API]
 :xref-sgw-pg-running-replications: {xref-pfx-sgw}{sgw-pg-running-replications}[Inter-cluster Replication]
 :xref-sgw-pg-security: {xref-pfx-sgw}{sgw-pg-security}[Security]
