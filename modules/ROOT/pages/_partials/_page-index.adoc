@@ -46,6 +46,7 @@ endif::xref-pfx-sgw[]
 //:sgw-pg-icr-running-replications: learn/icr-running-replications.adoc
 :sgw-pg-index-sgw: index.adoc
 :sgw-pg-index: index.adoc
+:sgw-pg-whatsnew: sgw-whatsnew.adoc
 :sgw-pg-indexing: indexing.adoc
 :sgw-pg-integrating-external-stores: integrating-external-stores.adoc
 :sgw-pg-introduction: introduction.adoc
@@ -105,7 +106,7 @@ endif::xref-pfx-sgw[]
 :xref-sgw-pg-icr-replication-types: {xref-pfx-sgw}{sgw-pg-icr-replication-types}[Replication Types]
 :xref-sgw-pg-icr-running-replications: {xref-pfx-sgw}{sgw-pg-icr-running-replications}[Running Replications]
 :xref-sgw-pg-index-sgw: {xref-pfx-sgw}{sgw-pg-index-sgw}[What's New]
-:xref-sgw-pg-index: {xref-pfx-sgw}{sgw-pg-index}[What's New]
+:xref-sgw-pg-index: {xref-pfx-sgw}{sgw-pg-index}[Sync Gateway]
 :xref-sgw-pg-indexing: {xref-pfx-sgw}{sgw-pg-indexing}[Indexing]
 :xref-sgw-pg-integrating-external-stores: {xref-pfx-sgw}{sgw-pg-integrating-external-stores}[Integrating External Stores]
 :xref-sgw-pg-introduction: {xref-pfx-sgw}{sgw-pg-introduction}[About SGW]
@@ -133,6 +134,7 @@ endif::xref-pfx-sgw[]
 :xref-sgw-pg-sync-gateway-channels: {xref-pfx-sgw}{sgw-pg-sync-gateway-channels}[Sync Gateway Channels]
 :xref-sgw-pg-upgrade: {xref-pfx-sgw}{sgw-pg-upgrade}[Upgrade]
 :xref-sgw-pg-users-and-roles: {xref-pfx-sgw}{sgw-pg-users-and-roles}[Users and Roles]
+:xref-sgw-pg-whatsnew: {xref-pfx-sgw}{sgw-pg-whatsnew}[What's New]
 :xref-sgw-pg-write-access: {xref-pfx-sgw}{sgw-pg-write-access}[Write Access]
 
 // BEGIN::ExitPage
